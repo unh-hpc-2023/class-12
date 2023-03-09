@@ -12,10 +12,6 @@
 
 double dot(const vector& x, const vector& y)
 {
-  double sum = 0.f;
-  assert(x.size() == y.size());
-  for (int i = 0; i < x.size(); i++) {
-    sum += x(i) * y(i);
-  }
-  return sum;
+  auto sum = xt::sum(x * y);
+  return sum(0);
 }

@@ -14,5 +14,19 @@ CPMAddPackage(
 )
 include(GoogleTest)
 
+CPMAddPackage(
+  NAME xtl
+  GITHUB_REPOSITORY xtensor-stack/xtl
+  GIT_TAG 0.7.5
+  VERSION 0.7.5
+)
+
+CPMAddPackage(
+  NAME xtensor
+  GITHUB_REPOSITORY xtensor-stack/xtensor
+  GIT_TAG 0.24.5
+  VERSION 0.24.5
+)
+
 add_subdirectory(c)
 add_subdirectory(cxx)

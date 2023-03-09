@@ -2,7 +2,6 @@
 #include "linear_algebra.h"
 
 #include <assert.h>
-#include <stdlib.h>
 
 // ----------------------------------------------------------------------
 // main
@@ -11,20 +10,13 @@
 
 int main(int argc, char** argv)
 {
-  const int N = 3;
-  vector x(N), y_ref(N);
-
-  for (int i = 0; i < x.size(); i++) {
-    x(i) = 1 + i;
-  }
-  matrix A(N, N);
-
-  for (int i = 0; i < N; i++) {
-    A(i, i) = i + 1; // set diagonal
-    y_ref(i) = (1 + i) * (1 + i);
-  }
-  A(0, 1) = 1.;  // add one non-zero off-diagonal element
-  y_ref(0) += 2; // adjust reference solution correspondingly
+  vector x{1., 2., 3.};
+  // clang-format off
+  matrix A{{1., 1., 0.},
+           {0., 2., 0.},
+           {0., 0., 3.}};
+  // clang-format off
+  vector y_ref = {3., 4., 9.};
 
   vector y = dot(A, x);
   assert(y == y_ref);

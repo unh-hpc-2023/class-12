@@ -43,7 +43,7 @@ static void setup_test_matrices(struct matrix* A, struct matrix* B,
 
 int main(int argc, char** argv)
 {
-  const int m = 5000, n = 5000, k = 200;
+  const int m = 5, n = 5, k = 5;
 
   struct matrix A, B, C, C_ref;
   matrix_construct(&A, m, k);

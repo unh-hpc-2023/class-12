@@ -11,16 +11,8 @@
 
 int main(int argc, char** argv)
 {
-  const int N = 3;
-  vector x(N), y(N);
-
-  for (int i = 0; i < x.size(); i++) {
-    x(i) = 1 + i;
-  }
-
-  for (int i = 0; i < y.size(); i++) {
-    y(i) = 2 + i;
-  }
+  vector x{1., 2., 3.};
+  vector y{2., 3., 4.};
 
   assert(dot(x, y) == 20.);
 

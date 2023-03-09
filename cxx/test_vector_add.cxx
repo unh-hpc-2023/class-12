@@ -11,7 +11,9 @@
 
 void test_vector_add(int N)
 {
-  vector x(N), y(N), z_ref(N);
+  vector x(xt::shape({N}));
+  vector y(xt::shape({N}));
+  vector z_ref(xt::shape({N}));
 
   for (int i = 0; i < N; i++) {
     x(i) = 1 + i;
