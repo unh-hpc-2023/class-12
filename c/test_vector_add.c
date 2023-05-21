@@ -25,6 +25,11 @@ void test_vector_add(int N)
   }
 
   vector_add(&x, &y, &z);
+  printf("{");
+   for (int i = 0; i < 4; i++) {
+     printf(" %g", VEC(&z, i));
+   }
+   printf(" }\n");
   assert(vector_is_equal(&z, &z_ref));
 
   vector_destruct(&x);
