@@ -5,9 +5,9 @@
 #include <stdbool.h>
 
 #include <assert.h>
-
+#include <stdio.h>
 // uncomment the following to enable bounds checking
-//#define BOUNDS_CHECK
+#define BOUNDS_CHECK
 
 // struct vector
 //
